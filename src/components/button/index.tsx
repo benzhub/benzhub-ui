@@ -1,9 +1,9 @@
 function Button({ title, variant = "contained" }: ButtonProps) {
-    let styles: React.CSSProperties = {
+    let styles: any = {
       padding: "5px 10px",
     };
   
-    if (variant === "outline") {
+    if (variant === "outlined") {
       styles = {
         ...styles,
         backgroundColor: "transparent",
@@ -19,12 +19,12 @@ function Button({ title, variant = "contained" }: ButtonProps) {
       };
     }
     return <button style={styles}>{title}</button>;
-  }
+}
   
-  export default Button;
+export default Button;
   
-  export interface ButtonProps {
+export interface ButtonProps {
     title: string;
-    variant?: "outline" | "contained";
-  }
+    variant?: "outlined" | "contained";
+}
   

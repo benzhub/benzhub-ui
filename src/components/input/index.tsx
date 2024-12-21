@@ -1,7 +1,7 @@
-function index() {
+function Input() {
   return (
-    <div>index</div>
+    <div>Input</div>
   )
 }
 
-export default index
+export default Input

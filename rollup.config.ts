@@ -30,10 +30,12 @@ export default [
   },
   {
     input: "src/index.ts", // entry point of your library
-    output: {
-      file: "dist/index.d.ts",
-      format: "es",
-    },
+    output: [
+      {
+        file: "dist/index.d.ts",
+        format: "es",
+      },
+    ],
     plugins: [dts()], // handle typescript related stuff
   },
 ];
