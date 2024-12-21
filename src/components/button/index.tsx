@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import React from "react";
 
 function Button({
   title,
@@ -7,6 +8,8 @@ function Button({
   disabled,
   size = "medium",
   rounded = "none",
+  icon,
+  iconPosition = "left",
 }: ButtonProps) {
   return (
     <button
@@ -24,8 +27,11 @@ function Button({
         "rounded-sm": rounded === "small",
         "rounded-md": rounded === "medium",
         "rounded-lg": rounded === "large",
+        "flex gap-3 items-center": icon,
+        "flex-row-reverse": icon && iconPosition === "right",
       })}
     >
+      {icon && icon}
       {title}
     </button>
   );
@@ -40,4 +46,6 @@ export interface ButtonProps {
   disabled?: boolean;
   size?: "small" | "medium" | "large";
   rounded?: "none" | "small" | "medium" | "large";
+  icon?: React.ReactNode;
+  iconPosition?: "left" | "right";
 }
