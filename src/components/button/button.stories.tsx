@@ -1,3 +1,4 @@
+import { User } from "lucide-react";
 import Button from ".";
 import { ButtonProps } from ".";
 
@@ -45,5 +46,20 @@ export const Disabled = {
   args: {
     title: "Click Me",
     disabled: true,
+  },
+} as { args: ButtonProps };
+
+export const Rounded = {
+  args: {
+    title: "Click Me",
+    rounded: "large",
+  },
+} as { args: ButtonProps };
+
+export const WithIcon = {
+  args: {
+    title: "Click Me",
+    icon: <User size={15}/>,
+    
   },
 } as { args: ButtonProps };
