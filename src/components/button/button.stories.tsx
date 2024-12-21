@@ -59,7 +59,13 @@ export const Rounded = {
 export const WithIcon = {
   args: {
     title: "Click Me",
-    icon: <User size={15}/>,
-    
+    icon: <User size={15} />,
+  },
+} as { args: ButtonProps };
+
+export const WithLoading = {
+  args: {
+    title: "Click Me",
+    isLoading: true,
   },
 } as { args: ButtonProps };
