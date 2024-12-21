@@ -15,6 +15,7 @@ function Button({
   return (
     <button
       onClick={onClick}
+      disabled={disabled}
       className={classNames("cursor-pointer shadow-none text-sm px-5", {
         "border border-solid border-black bg-white text-black":
           variant === "outlined",
@@ -37,6 +38,7 @@ function Button({
 
       {isLoading && (
         <div
+          data-testid="loading-spinner"
           className={classNames("w-3 h-3 border-2 border-solid border-t-transparent animate-spin rounded-full", {
             "border-white": variant === "contained",
             "border-black": variant === "outlined",
