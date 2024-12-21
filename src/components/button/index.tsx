@@ -1,10 +1,8 @@
-import "./index.css";
-
 function Button({ title, variant = "contained", onClick }: ButtonProps) {
-  let className = 'btn';
+  let className = "py-2 px-5 cursor-pointer";
 
-  if(variant === "outlined") className += " btn-outlined";
-  if(variant === "contained") className += " btn-contained";
+  if (variant === "outlined") className += " border border-solid border-black bg-white text-black";
+  if (variant === "contained") className += " bg-black text-white";
   return (
     <button onClick={onClick} className={className}>
       {title}
