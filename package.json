@@ -13,5 +13,14 @@
     "react": "19.0.0",
     "ts-lib": "0.0.5",
     "typescript": "5.7.2"
+  },
+  "dependencies": {
+    "@rollup/plugin-commonjs": "28.0.2",
+    "@rollup/plugin-node-resolve": "16.0.0",
+    "@rollup/plugin-terser": "0.4.4",
+    "@rollup/plugin-typescript": "12.1.2",
+    "rollup": "4.29.0",
+    "rollup-plugin-dts": "6.1.1",
+    "rollup-plugin-peer-deps-external": "2.2.4"
   }
 }
