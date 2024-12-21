@@ -1,25 +1,19 @@
-function Button({ title, variant = "contained", onClick }: ButtonProps) {
-  let styles: any = {
-    padding: "5px 10px",
-    cursor: "pointer",
-  };
+import classNames from "classnames";
 
-  if (variant === "outlined") {
-    styles = {
-      ...styles,
-      backgroundColor: "transparent",
-      border: "1px solid black",
-    };
-  }
-
-  if (variant === "contained") {
-    styles = {
-      ...styles,
-      backgroundColor: "black",
-      color: "white",
-    };
-  }
-  return <button onClick={onClick} style={styles}>{title}</button>;
+function Button({ title, variant = "contained", onClick, disabled }: ButtonProps) {
+  return (
+    <button
+      onClick={onClick}
+      className={classNames("py-2 px-5 cursor-pointer", {
+        "border border-solid border-black bg-white text-black":
+          variant === "outlined",
+        "bg-black text-white": variant === "contained",
+        "pointer-events-none bg-gray-300 border-none cursor-not-allowed": disabled
+      })}
+    >
+      {title}
+    </button>
+  );
 }
 
 export default Button;
@@ -28,4 +22,5 @@ export interface ButtonProps {
   title: string;
   variant?: "outlined" | "contained";
   onClick?: () => void;
+  disabled?: boolean;
 }

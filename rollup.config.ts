@@ -4,6 +4,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import terser from "@rollup/plugin-terser";
 import peerDeps from "rollup-plugin-peer-deps-external";
 import { dts } from "rollup-plugin-dts";
+import postcss from "rollup-plugin-postcss"
 
 export default [
   {
@@ -23,6 +24,7 @@ export default [
     plugins: [
       peerDeps(), // handle peer dependencies
       resolve(), // resolve node modules
+      postcss(),
       commonjs(), // convert commonjs to esm
       typescript(), // handle typescript
       terser(), // minify the code
@@ -37,5 +39,6 @@ export default [
       },
     ],
     plugins: [dts()], // handle typescript related stuff
+    external: [/\.css$/] // exclude css files from types
   },
 ];
