@@ -1,5 +1,3 @@
-// import React from 'react'
-
 function Button({ title, variant = "contained" }: ButtonProps) {
     let styles: React.CSSProperties = {
       padding: "5px 10px",
