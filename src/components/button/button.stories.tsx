@@ -1,71 +1,34 @@
-import { User } from "lucide-react";
-import Button from ".";
-import { ButtonProps } from ".";
+import type { Meta, StoryObj } from '@storybook/react';
+import Button from './index';
+import { useState } from 'react';
 
-export default {
-  title: "Button",
+const meta = {
+  title: 'Components/Button',
   component: Button,
+  parameters: {
+    layout: 'centered',
+  },
+} satisfies Meta<typeof Button>;
+
+export default meta;
+type Story = StoryObj<typeof Button>;
+
+const ButtonWithLoading = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  
+  const handleClick = () => {
+    setIsLoading(true);
+  };
+
+  return (
+    <Button
+      title="Click Me"
+      onClick={handleClick}
+      isLoading={isLoading}
+    />
+  );
 };
 
-export const Containd = {
-  args: {
-    title: "Click Me",
-    variant: "contained",
-  },
-} as { args: ButtonProps };
-
-export const Outlined = {
-  args: {
-    title: "Click Me",
-    variant: "outlined",
-  },
-} as { args: ButtonProps };
-
-export const Small = {
-  args: {
-    title: "Click Me",
-    size: "small",
-  },
-} as { args: ButtonProps };
-
-export const Medium = {
-  args: {
-    title: "Click Me",
-    size: "medium",
-  },
-} as { args: ButtonProps };
-
-export const Large = {
-  args: {
-    title: "Click Me",
-    size: "large",
-  },
-} as { args: ButtonProps };
-
-export const Disabled = {
-  args: {
-    title: "Click Me",
-    disabled: true,
-  },
-} as { args: ButtonProps };
-
-export const Rounded = {
-  args: {
-    title: "Click Me",
-    rounded: "large",
-  },
-} as { args: ButtonProps };
-
-export const WithIcon = {
-  args: {
-    title: "Click Me",
-    icon: <User size={15} />,
-  },
-} as { args: ButtonProps };
-
-export const WithLoading = {
-  args: {
-    title: "Click Me",
-    isLoading: true,
-  },
-} as { args: ButtonProps };
+export const Default: Story = {
+  render: () => <ButtonWithLoading />
+};
