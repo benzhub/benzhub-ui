@@ -6,9 +6,9 @@ describe("Button Component", () => {
   // 基本功能測試
   test("應該正確渲染按鈕文字和處理點擊事件", () => {
     const handleClick = vi.fn();
-    render(<Button title="點擊我" onClick={handleClick} />);
+    render(<Button title="Click Me" onClick={handleClick} />);
     
-    const button = screen.getByRole("button", { name: "點擊我" });
+    const button = screen.getByRole("button", { name: "Click Me" });
     expect(button).toBeInTheDocument();
     
     fireEvent.click(button);
