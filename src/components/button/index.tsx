@@ -10,6 +10,7 @@ function Button({
   rounded = "none",
   icon,
   iconPosition = "left",
+  isLoading = false,
 }: ButtonProps) {
   return (
     <button
@@ -27,12 +28,21 @@ function Button({
         "rounded-sm": rounded === "small",
         "rounded-md": rounded === "medium",
         "rounded-lg": rounded === "large",
-        "flex gap-3 items-center": icon,
+        "flex gap-3 items-center": icon || isLoading,
         "flex-row-reverse": icon && iconPosition === "right",
       })}
     >
       {icon && icon}
       {title}
+
+      {isLoading && (
+        <div
+          className={classNames("w-3 h-3 border-2 border-solid border-t-transparent animate-spin rounded-full", {
+            "border-white": variant === "contained",
+            "border-black": variant === "outlined",
+          })}
+        ></div>
+      )}
     </button>
   );
 }
@@ -48,4 +58,5 @@ export interface ButtonProps {
   rounded?: "none" | "small" | "medium" | "large";
   icon?: React.ReactNode;
   iconPosition?: "left" | "right";
+  isLoading?: boolean;
 }

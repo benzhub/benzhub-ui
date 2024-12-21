@@ -7,15 +7,28 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup -c --bundleConfigAsCjs"
+    "build": "rollup -c --bundleConfigAsCjs",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "author": "Ben Chang <lenrich1403@gmail.com> (https://benzhub.github.io/)",
   "license": "MIT",
   "devDependencies": {
+    "@chromatic-com/storybook": "3.2.3",
+    "@storybook/addon-essentials": "8.4.7",
+    "@storybook/addon-interactions": "8.4.7",
+    "@storybook/addon-onboarding": "8.4.7",
+    "@storybook/addon-postcss": "2.0.0",
+    "@storybook/blocks": "8.4.7",
+    "@storybook/react": "8.4.7",
+    "@storybook/react-vite": "8.4.7",
+    "@storybook/test": "8.4.7",
     "@types/react": "^18.3.17",
     "autoprefixer": "10.4.20",
     "postcss": "8.4.49",
     "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "storybook": "8.4.7",
     "tailwindcss": "3.4.17",
     "ts-lib": "0.0.5",
     "typescript": "5.7.2"
@@ -26,6 +39,7 @@
     "@rollup/plugin-terser": "0.4.4",
     "@rollup/plugin-typescript": "12.1.2",
     "classnames": "2.5.1",
+    "lucide-react": "0.469.0",
     "rollup": "4.29.0",
     "rollup-plugin-dts": "6.1.1",
     "rollup-plugin-peer-deps-external": "2.2.4",
