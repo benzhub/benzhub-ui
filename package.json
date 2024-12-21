@@ -1,0 +1,17 @@
+{
+  "name": "benzhub-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ben Chang <lenrich1403@gmail.com> (https://benzhub.github.io/)",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "19.0.2",
+    "react": "19.0.0",
+    "ts-lib": "0.0.5",
+    "typescript": "5.7.2"
+  }
+}
