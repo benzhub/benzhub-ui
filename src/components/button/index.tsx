@@ -1,25 +1,15 @@
+import "./index.css";
+
 function Button({ title, variant = "contained", onClick }: ButtonProps) {
-  let styles: any = {
-    padding: "5px 10px",
-    cursor: "pointer",
-  };
+  let className = 'btn';
 
-  if (variant === "outlined") {
-    styles = {
-      ...styles,
-      backgroundColor: "transparent",
-      border: "1px solid black",
-    };
-  }
-
-  if (variant === "contained") {
-    styles = {
-      ...styles,
-      backgroundColor: "black",
-      color: "white",
-    };
-  }
-  return <button onClick={onClick} style={styles}>{title}</button>;
+  if(variant === "outlined") className += " btn-outlined";
+  if(variant === "contained") className += " btn-contained";
+  return (
+    <button onClick={onClick} className={className}>
+      {title}
+    </button>
+  );
 }
 
 export default Button;

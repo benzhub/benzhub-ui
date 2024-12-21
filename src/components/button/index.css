@@ -1,0 +1,14 @@
+.btn {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.btn-outlined {
+  border: 1px solid #000;
+  color: #000;
+}
+
+.btn-contained {
+  background-color: #000;
+  color: #fff;
+}
