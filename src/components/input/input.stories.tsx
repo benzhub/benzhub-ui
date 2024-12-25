@@ -1,44 +1,52 @@
-import { Meta } from "@storybook/react/*";
-import Input from "./";
-import { InputProps } from "./";
+import type { Meta, StoryObj } from '@storybook/react';
+import Input from './index';
+import { useState } from 'react';
 
-export default {
-  title: "Components/Input",
+const meta = {
+  title: 'Components/Input',
   component: Input,
-} as Meta<InputProps>;
-
-export const Basic = {
-  args: {
-    label: "Username",
-    placeholder: "Enter your username",
+  parameters: {
+    layout: 'centered',
   },
+} satisfies Meta<typeof Input>;
+
+export default meta;
+type Story = StoryObj<typeof Input>;
+
+const InputWithState = () => {
+  const [value, setValue] = useState('');
+  return (
+    <Input
+      value={value}
+      onChange={(val) => setValue(val.toString())}
+      placeholder="請輸入..."
+      label="基本輸入框"
+    />
+  );
 };
 
-export const Large = {
-  args: {
-    ...Basic.args,
-    size: "large",
-  },
+export const Default: Story = {
+  render: () => <InputWithState />
 };
 
-export const Error = {
-  args: {
-    ...Basic.args,
-    error: "This is an error message",
-  },
+export const Disabled: Story = {
+  render: () => (
+    <Input
+      value=""
+      onChange={() => {}}
+      disabled
+      placeholder="禁用狀態"
+    />
+  )
 };
 
-export const Disabled = {
-  args: {
-    ...Basic.args,
-    disabled: true,
-    value: "Disabled Input",
-  },
-};
-
-export const Rounded = {
-  args: {
-    ...Basic.args,
-    rounded: "full",
-  },
+export const WithError: Story = {
+  render: () => (
+    <Input
+      value=""
+      onChange={() => {}}
+      error="這是一個錯誤信息"
+      placeholder="錯誤狀態"
+    />
+  )
 };
