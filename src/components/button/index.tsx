@@ -31,6 +31,7 @@ function Button({
           "rounded-sm": rounded === "small",
           "rounded-md": rounded === "medium",
           "rounded-lg": rounded === "large",
+          "rounded-full": rounded === "full",
           "flex gap-3 items-center": icon || isLoading,
           "flex-row-reverse": icon && iconPosition === "right",
         })}
@@ -63,7 +64,7 @@ export interface ButtonProps {
   onClick?: () => void;
   disabled?: boolean;
   size?: "small" | "medium" | "large";
-  rounded?: "none" | "small" | "medium" | "large";
+  rounded?: "none" | "small" | "medium" | "large" | "full";
   icon?: React.ReactNode;
   iconPosition?: "left" | "right";
   isLoading?: boolean;

@@ -29,6 +29,7 @@ export default [
       typescript(), // handle typescript
       terser(), // minify the code
     ],
+    external: ['react']
   },
   {
     input: "src/index.ts", // entry point of your library
