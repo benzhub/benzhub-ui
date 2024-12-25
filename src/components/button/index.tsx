@@ -32,7 +32,7 @@ function Button({
           "rounded-md": rounded === "medium",
           "rounded-lg": rounded === "large",
           "rounded-full": rounded === "full",
-          "flex gap-3 items-center": icon || isLoading,
+          "flex justify-center gap-3 items-center": icon || isLoading,
           "flex-row-reverse": icon && iconPosition === "right",
         })}
       >
