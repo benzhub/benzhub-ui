@@ -20,7 +20,3 @@ export interface ThemeProviderProps {
   children: ReactNode;
 }
 
-const defaultTheme = {
-  "--primary-color": "#3b82f6", // 藍色
-  // ... 其他主題變量
-};
