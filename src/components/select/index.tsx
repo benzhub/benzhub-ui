@@ -49,7 +49,7 @@ const Select = ({
 
   return (
     <ThemeProvider>
-      <div className="w-max" id={name}>
+      <div className="w-max box-border" id={name}>
         <div
           className={classNames(
             "border border-solid border-primary cursor-pointer flex justify-between items-center gap-2",
