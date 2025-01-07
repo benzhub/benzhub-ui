@@ -4,6 +4,7 @@ import { AlertProps } from "./index";
 export default {
   component: Alert,
   title: "Components/Alert",
+  tags: ["autodocs"],
 } as { component: React.ComponentType<AlertProps>; title: string };
 
 export const Info = {

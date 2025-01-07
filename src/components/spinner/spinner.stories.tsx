@@ -5,6 +5,7 @@ import Spinner, { SpinnerProps } from "./";
 export default {
   component: Spinner,
   title: "Components/Spinner",
+  tags: ["autodocs"],
 } as Meta<ModalProps>;
 
 export const Small = {

@@ -6,6 +6,7 @@ import Button from "../button";
 export default {
   title: "Components/Modal",
   component: Modal,
+  tags: ["autodocs"],
 } as Meta<ModalProps>;
 
 const Template = (args: ModalProps) => {

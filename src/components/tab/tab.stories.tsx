@@ -11,6 +11,7 @@ const tabsData = [
 export default {
   title: "Components/Tab",
   component: Tab,
+  tags: ["autodocs"],
 } as Meta<TabProps>;
 
 const Template = (args: TabProps) => {
