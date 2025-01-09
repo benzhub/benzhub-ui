@@ -1,5 +1,6 @@
 import "./main.css";
 import Button from "./components/button";
+import FireFlyButton from "./components/button/FireFly";
 import Input from "./components/input";
 import Select from "./components/select";
 import ThemeProvider from "./components/theme-provider";
@@ -12,6 +13,7 @@ import Alert from "./components/alert";
 
 export {
   Button,
+  FireFlyButton,
   Input,
   Select,
   ThemeProvider,
