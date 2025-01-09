@@ -85,7 +85,7 @@ const LoadingButton = () => {
 
   return (
     <Button
-      title="點擊載入"
+      title="點擊顯示載入"
       onClick={handleClick}
       isLoading={isLoading}
     />
@@ -140,3 +140,4 @@ export const Playground: Story = {
     </div>
   ),
 };
+
