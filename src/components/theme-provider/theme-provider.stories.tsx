@@ -9,6 +9,6 @@ export default {
 
 export const BasicTheme = {
   args: {
-    primaryColor: "#000",
+    primaryColor: "#26aaeb",
   },
 } as { args: ThemeProviderProps };

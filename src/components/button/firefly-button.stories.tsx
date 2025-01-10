@@ -3,7 +3,7 @@ import FireFlyButton from './FireFly';
 import { Heart } from 'lucide-react';
 
 const meta = {
-  title: 'Components/FireFlyButton',
+  title: 'Components/Button/FireFlyButton',
   component: FireFlyButton,
   parameters: {
     layout: 'centered',
