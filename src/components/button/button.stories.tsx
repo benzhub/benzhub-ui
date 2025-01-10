@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Mail, Heart } from 'lucide-react';
 
 const meta = {
-  title: 'Components/Button',
+  title: 'Components/Button/DefaultButton',
   component: Button,
   parameters: {
     layout: 'centered',
