@@ -4,7 +4,7 @@ const ThemeProvider = ({
   children,
   primaryColor = document.documentElement.style.getPropertyValue(
     "--primary-color"
-  ) || "#000",
+  ) || "#26aaeb",
 }: ThemeProviderProps) => {
   useEffect(() => {
     document.documentElement.style.setProperty("--primary-color", primaryColor);

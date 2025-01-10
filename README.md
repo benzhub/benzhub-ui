@@ -6,7 +6,7 @@
 A modern React component library built with TypeScript, TailwindCSS, and Storybook.
 
 ## Storybook Chromatic
-https://677cd2e3b6953d9daefe6664-ehashtacoc.chromatic.com/
+https://dev--677cd2e3b6953d9daefe6664.chromatic.com/
 
 ## 🌟 Features
 

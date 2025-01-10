@@ -1,0 +1,3 @@
+import{j as r}from"./jsx-runtime-CkxqCPlQ.js";import{r as o}from"./index-DJO9vBfz.js";const m=({children:t,primaryColor:e=document.documentElement.style.getPropertyValue("--primary-color")||"#26aaeb"})=>(o.useEffect(()=>{document.documentElement.style.setProperty("--primary-color",e)},[e]),r.jsx(r.Fragment,{children:t}));m.__docgenInfo={description:"",methods:[],displayName:"ThemeProvider",props:{primaryColor:{required:!1,tsType:{name:"string"},description:"",defaultValue:{value:`document.documentElement.style.getPropertyValue(\r
+  "--primary-color"\r
+) || "#26aaeb"`,computed:!1}},children:{required:!0,tsType:{name:"ReactNode"},description:""}}};export{m as T};
